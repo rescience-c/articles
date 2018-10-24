@@ -17,7 +17,7 @@ full metadata file), you can actual publish the article on both Zenodo and
 Github.
 
 
-#### Reserve a DOI from Zenodo
+#### 1. Reserve a DOI from Zenodo
 
 You can run the [reserve-doi.py](reserve-doi.py) script using the provided
 metadata file. In the example below, we use the actual server but you can first
@@ -30,7 +30,7 @@ Article ID:  xxxxx
 Article DOI: 10.5281/zenodo.xxxxx
 ```
 
-#### Reserve an article number
+#### 2. Reserve an article number
 
 To get a new article number, you will need to run the script
 [reserve-number.py](reserve-number.py) that will return the next available
@@ -49,7 +49,7 @@ the `volumes.yaml` file such that next article number is right. **Don't re-run
 the script or it will increase the number again**.
 
 
-#### Publishing on Zenodo
+#### 3. Publishing on Zenodo
 
 Once the DOI and article number have been obtained, once the metadata and the
 PDF **have been updated** (author responsability), you can proceed with the
@@ -64,7 +64,7 @@ Entry is online at https://zenodo.org/record/xxxxx
 ```
 
 
-#### Uploading to GitHub
+#### 4. Uploading to GitHub
 
 Once the paper is published on Zenodo, you'll need to create a subdirectory in
 https://github.com/rescience-c/articles for the newly published paper. This

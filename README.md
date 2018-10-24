@@ -28,14 +28,11 @@ $ ./reserve-doi.py --zenodo
 Request for a new DOI from https://zenodo.org... done!
 Article ID:  xxxxx
 Article DOI: 10.5281/zenodo.xxxxx
-
-Request for a new article number... done!
-Article No:  x
 ```
 
 #### Reserve an article number
 
-To get a new article number, you can run the script
+To get a new article number, you will need to run the script
 [reserve-number.py](reserve-number.py) that will return the next available
 article number by parsing the [volumes.yaml](volumes.yaml) file. You will need
 to use the `--update` flag to update this file.
@@ -47,14 +44,15 @@ Article No:  x
 "volumes.yaml" has been updated, don't forget to commit the change
 ```
 
-After getting thr article number, make sure to commit and push the change on
-the `volumes.yaml` file such that next article number is right.
+After getting your article number, make sure to commit and push the change on
+the `volumes.yaml` file such that next article number is right. **Don't re-run
+the script or it will increase the number again**.
 
 
 #### Publishing on Zenodo
 
-Once the DOI and article number has been obtained and both the metadata and the
-PDF **have been updated** (author responsability), you can procced with the
+Once the DOI and article number have been obtained, once the metadata and the
+PDF **have been updated** (author responsability), you can proceed with the
 actual publication on Zenodo:
 
 ```bash
@@ -67,3 +65,22 @@ Entry is online at https://zenodo.org/record/xxxxx
 
 
 #### Uploading to GitHub
+
+Once the paper is published on Zenodo, you'll need to create a subdirectory in
+https://github.com/rescience-c/articles for the newly published paper. This
+directory will be named after the Zenodo DOI (replacing `/` with `_`) and will
+contain the PDF, the YAML file, the bibtex corresponding entry and the
+code. To include the code, we'll use [git
+submodule](https://blog.github.com/2016-02-01-working-with-submodules/).
+
+```bash
+$ mkdir 10.5281_zenodo.xxxxx
+$ cd 10.5281_zenodo.xxxxx
+$ cp xxx.pdf   article.pdf
+$ cp yyy.yaml  article.yaml
+$ cp zzz.bib   article.bib
+$ git submodule add <code_url>
+```
+
+The `<code_url>` is avalailable from the metadata file.
+

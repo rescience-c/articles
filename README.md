@@ -10,10 +10,11 @@ The sandbox token is expected to be stored in the environment variable
 `ZENODO_SANDBOX_TOKEN` while the true token must be stored in `ZENODO_TOKEN`.
 
 The actual publication is a two steps process because you need to reserve a DOI
-from Zenodo and to communicate it to the author in order for her to update the
-PDF and the metadata with the relevant DOI. Once this is done (and that you
-have the updated PDF and the full metadata file), you can actual publish the
-article on both Zenodo and Github.
+from Zenodo and a new article number and to communicate them to the author in
+order for her to update the PDF and the metadata with the relevant DOI and
+article number. Once this is done (and that you have the updated PDF and the
+full metadata file), you can actual publish the article on both Zenodo and
+Github.
 
 
 #### Reserve a DOI from Zenodo
@@ -27,12 +28,34 @@ $ ./reserve-doi.py --zenodo
 Request for a new DOI from https://zenodo.org... done!
 Article ID:  xxxxx
 Article DOI: 10.5281/zenodo.xxxxx
+
+Request for a new article number... done!
+Article No:  x
 ```
+
+#### Reserve a DOI from Zenodo
+
+To get a new article number, you can run the script
+[reserve-number.py](reserve-number.py) that will return the next available
+article number by parsing the [volumes.yaml](volumes.yaml) file. You will need
+to use the `--update` flag to update this file.
+
+```bash
+$ ./reserve-number.py --volume x --update
+Request for a new article number for volume x
+Article No:  x
+"volumes.yaml" has been updated, don't forget to commit the change
+```
+
+After getting thr article number, make sure to commit and push the change on
+the `volumes.yaml` file such that next article number is right.
+
 
 #### Publishing on Zenodo
 
-Once the DOI has been obtained and both the metadata and the PDF **have been
-updated**, you can procced with the actual publication on Zenodo:
+Once the DOI and article number has been obtained and both the metadata and the
+PDF **have been updated** (author responsability), you can procced with the
+actual publication on Zenodo:
 
 ```bash
 $ ./publish.py --zenodo --metadata metadata.yaml --pdf article.pdf

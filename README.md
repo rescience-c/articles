@@ -33,7 +33,7 @@ Request for a new article number... done!
 Article No:  x
 ```
 
-#### Reserve a DOI from Zenodo
+#### Reserve an article number
 
 To get a new article number, you can run the script
 [reserve-number.py](reserve-number.py) that will return the next available

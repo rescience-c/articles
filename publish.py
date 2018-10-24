@@ -145,9 +145,6 @@ if __name__ == '__main__':
     article_doi = article.article_doi
     article_id = article_doi.split('.')[-1]
 
-    print(article_doi)
-    print(article_id)
-    
     # Upload content
     print("Uploading content... ", end="")
     upload_content(server, token, article_id, article_file)

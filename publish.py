@@ -162,3 +162,16 @@ if __name__ == '__main__':
 
     print("Entry is online at ", end="")
     print("https://%s/record/%s" % (server, article_id))
+
+
+    #
+    #$ mkdir 10.5281_zenodo.xxxxx
+    #$ cd 10.5281_zenodo.xxxxx
+    #$ cp xxx.pdf   article.pdf
+    #$ cp yyy.yaml  article.yaml
+    #$ cp zzz.bib   article.bib
+    #$ git submodule add <code_url>
+    #$ cd ..
+    #$ git add 10.5281_zenodo.xxxxx/*
+
+

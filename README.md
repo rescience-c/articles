@@ -1,10 +1,11 @@
 ### ReScience C published articles
 
 In order to publish a new article (after acceptance), you'll need to have the
-article metadata file (YAML format) and the corresponding article PDF. The
-metadata file should be missing the article DOI, number and URL. The first step
-is to request this information from Zenodo. Before proceeding further, you'll
-need a Zenodo token that can be requested from the [sandbox
+article metadata file (YAML format) and the corresponding article (PDF
+format). The metadata file should be missing the article DOI, number and
+URL. The first step is to request this information from Zenodo. Before
+proceeding further, you'll need a Zenodo token that can be requested from the
+[sandbox
 server](https://sandbox.zenodo.org/account/settings/applications/tokens/new/)
 and from the [actual
 server](https://zenodo.org/account/settings/applications/tokens/new/).  The

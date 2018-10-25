@@ -3,11 +3,13 @@
 In order to publish a new article (after acceptance), you'll need to have the
 article metadata file (YAML format) and the corresponding article PDF. The
 metadata file should be missing the article DOI, number and URL. The first step
-is to request this information from Zenodo.
-
-Before proceeeding further, you'll need a Zenodo token that can be requested
-from the [sandbox server](https://sandbox.zenodo.org/account/settings/applications/tokens/new/) and from the [actual server](https://zenodo.org/account/settings/applications/tokens/new/).  The sandbox token is expected to be stored in the environment variable `ZENODO_SANDBOX_TOKEN` while the true token must be stored in `ZENODO_TOKEN`.
-
+is to request this information from Zenodo. Before proceeding further, you'll
+need a Zenodo token that can be requested from the [sandbox
+server](https://sandbox.zenodo.org/account/settings/applications/tokens/new/)
+and from the [actual
+server](https://zenodo.org/account/settings/applications/tokens/new/).  The
+sandbox token is expected to be stored in the environment variable
+`ZENODO_SANDBOX_TOKEN` while the true token must be stored in `ZENODO_TOKEN`.
 **We strongly advise you to first test the procedure on the sandbox server**
 
 

@@ -10,7 +10,8 @@ and from the [actual
 server](https://zenodo.org/account/settings/applications/tokens/new/).  The
 sandbox token is expected to be stored in the environment variable
 `ZENODO_SANDBOX_TOKEN` while the true token must be stored in `ZENODO_TOKEN`.
-**We strongly advise you to first test the procedure on the sandbox server**
+We strongly advise you to **first test the procedure** on the sandbox server
+using the `--sandbox` switch.
 
 
 #### Pre-Publication (article DOI, URL and number)

@@ -55,12 +55,17 @@ automatically).
 #### Website update
 
 To have the new article to appear on the website, you'll need to generate the
-bibtex entry using the [yaml-to-bibtex.py](yaml-to-bibtex.py) script and to add
-this entry to the
-[published.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/published.bib)
-file on the website (you can do it directly from the GitHub interface).
+bibtex entry using the [yaml-to-bibtex.py](yaml-to-bibtex.py) script:
 
-If you previously added the entry to the
-[under_review.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/under_review.bib) file, don't forget to remove it.
+``bash
+$ ./yaml-to-bibtex.py --input metadata.yaml --output entry.bib
+```
+
+You can then prepend this entry to the
+[published.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/published.bib)
+file on the website (you can do it directly from the GitHub interface). If you
+previously added the entry to the
+[under_review.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/under_review.bib)
+file, don't forget to remove it.
 
 

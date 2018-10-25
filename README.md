@@ -57,7 +57,7 @@ automatically).
 To have the new article to appear on the website, you'll need to generate the
 bibtex entry using the [yaml-to-bibtex.py](yaml-to-bibtex.py) script:
 
-``bash
+```bash
 $ ./yaml-to-bibtex.py --input metadata.yaml --output entry.bib
 ```
 

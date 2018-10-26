@@ -162,16 +162,36 @@ if __name__ == '__main__':
 
     print("Entry is online at ", end="")
     print("https://%s/record/%s" % (server, article_id))
+    print()
 
+    # Create a new local directory containing article and metadata
+    # This is done in a new branch
+    branch = article_doi.replace('/','_')
+    directory = branch
+    src_pdf = article_file
+    dst_pdf = os.path.join(directory, "article.pdf")
+    src_yaml = metadata_file
+    dst_yaml = os.path.join(directory, "article.yaml")
+    src_bib = metadata_file
+    dst_bib = os.path.join(directory, "article.bib")
 
-    #
-    #$ mkdir 10.5281_zenodo.xxxxx
-    #$ cd 10.5281_zenodo.xxxxx
-    #$ cp xxx.pdf   article.pdf
-    #$ cp yyy.yaml  article.yaml
-    #$ cp zzz.bib   article.bib
-    #$ git submodule add <code_url>
-    #$ cd ..
-    #$ git add 10.5281_zenodo.xxxxx/*
+    
+    os.system("git stash")
+    os.system("git checkout -b {0}".format(branch))
+    os.system("mkdir {0}".format(directory))
+    os.system("cp {0} {1}".format(src_pdf, dst_pdf))
+    os.system("cp {0} {1}".format(src_yaml, dst_yaml))
+    os.system("./yaml-to-bibtex.py -i {0} -o {1}".format(src_bib, dst_bib))
+    os.system("git add {0}".format(dst_pdf))
+    os.system("git add {0}".format(dst_yaml))
+    os.system("git add {0}".format(dst_bib))
+    os.system("git commit -m 'Added entry {0}'".format(article_doi))
+    os.system("git checkout master")
+    print()
+
+    print("Local entry has been created in {0}.".format(directory))
+    print("A new git branch ({0}) has been created.".format(branch))
+
+    
 
 

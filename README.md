@@ -61,21 +61,15 @@ A new git branch (10.5072_zenodo.xxxxx) has been created.
 ```
 
 This will create a new public record on Zenodo and this will also create a new
-local directory corresponding to the entry. This means you need to push your
-changes on GitHub and make a pull request (the commit will have been created
+local directory corresponding to the entry. This means you need to push this
+new branch on GitHub and make a pull request (the commit will have been created
 automatically).
 
 
 #### Website update
 
-To have the new article to appear on the website, you'll need to generate the
-bibtex entry using the [yaml-to-bibtex.py](yaml-to-bibtex.py) script:
-
-```bash
-$ ./yaml-to-bibtex.py --input metadata.yaml --output entry.bib
-```
-
-You can then prepend this entry to the
+To have the new article to appear on the website, you'll need to prepend the
+newly created bibtex entry (look into the local repository). to the
 [published.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/published.bib)
 file on the website (you can do it directly from the GitHub interface). If you
 previously added the entry to the

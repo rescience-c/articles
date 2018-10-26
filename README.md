@@ -45,6 +45,19 @@ Uploading content... done!
 Uploading metadata... done!
 Publishing... done!
 Entry is online at https://zenodo.org/record/xxxxx
+
+Saved working directory and index state WIP on master: 30cd860 Typo
+Switched to a new branch '10.5072_zenodo.xxxxx'
+[10.5072_zenodo.248588 2e613e7] Created local entry for 10.5072/zenodo.xxxxx
+ 3 files changed, 158 insertions(+)
+ create mode 100644 10.5072_zenodo.xxxxx/article.bib
+ create mode 100644 10.5072_zenodo.xxxxx/article.pdf
+ create mode 100644 10.5072_zenodo.xxxxx/article.yaml
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Local entry has been created in 10.5072_zenodo.xxxxx
+A new git branch (10.5072_zenodo.xxxxx) has been created.
 ```
 
 This will create a new public record on Zenodo and this will also create a new

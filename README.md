@@ -69,7 +69,7 @@ automatically).
 #### Website update
 
 To have the new article to appear on the website, you'll need to prepend the
-newly created bibtex entry (look into the local repository). to the
+newly created bibtex entry (look into the local repository) to the
 [published.bib](https://github.com/rescience-c/rescience-c.github.io/blob/sources/_bibliography/published.bib)
 file on the website (you can do it directly from the GitHub interface). If you
 previously added the entry to the

@@ -158,7 +158,7 @@ if __name__ == '__main__':
     # Publish entry
     print("Publishing... ", end="")
     publish(server, token, article_id)
-    print("done!\n")
+    print("done!")
 
     print("Entry is online at ", end="")
     print("https://%s/record/%s" % (server, article_id))
